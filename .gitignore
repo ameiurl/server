@@ -1,0 +1,13 @@
+*_bak/*
+/www/*
+!/www/test/
+!/www/app/
+nginx/conf.d/*
+!nginx/conf.d/nginx.conf
+gogs/gogs/log/
+gogs/ssh/
+/logs
+/mysql/*
+!/mysql/conf/
+!/mysql/backup/
+/redis

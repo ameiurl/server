@@ -1,0 +1,133 @@
+version: '3'
+
+services:
+  mydb:
+    build: ./mysql
+    container_name: mydb
+    image: mysql:8.0
+    command: mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - '3306:3306'
+    volumes:
+      - '/server/mysql/data:/var/lib/mysql'
+      - '/server/mysql/conf:/etc/mysql/conf.d/my.cnf'
+      - '/server/logs/mysql.logs:/data/mysql/logs'
+  myphp5.6:
+    # build: ./php
+    image: php:5.6-fpm 
+    container_name: "myphp5.6"
+    privileged: true
+    restart: always
+    ports:
+      - "9002:9000"
+    volumes:
+      - /server/www:/var/www/html
+      - /server/php/php.ini:/usr/local/etc/php/php.ini
+      - /server/logs/php.logs:/var/log/php
+    links:
+      - "mydb"
+      - "myredis"
+  myphp:
+    # build: ./php
+    image: cms1984/php7.3.8-fpm 
+    container_name: "myphp"
+    privileged: true
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - /server/www:/var/www/html
+      - /server/php/php.ini:/usr/local/etc/php/php.ini
+      - /server/logs/php.logs:/var/log/php
+    links:
+      - "mydb"
+      - "myredis"
+  myphp8.2:
+    image: suyar/php:8.2-fpm 
+    container_name: "myphp8.2"
+    privileged: true
+    restart: always
+    ports:
+      - "9001:9000"
+    volumes:
+      - /server/www:/var/www/html
+      - /server/php/php.ini:/usr/local/etc/php/php.ini
+      - /server/logs/php.logs:/var/log/php
+    links:
+      - "mydb"
+      - "myredis"
+  mynginx:
+    build: ./nginx
+    container_name: "mynginx"
+    privileged: true
+    restart: always
+    ports:
+      - "0.0.0.0:80:80"
+      - "0.0.0.0:81:81"
+      - "0.0.0.0:800:800"
+      - "0.0.0.0:801:801"
+      - "0.0.0.0:802:802"
+      - "0.0.0.0:803:803"
+      - "0.0.0.0:804:804"
+      - "0.0.0.0:443:443"
+      - "0.0.0.0:555:555"
+      - "0.0.0.0:556:556"
+      - "0.0.0.0:901:901"
+      - "0.0.0.0:930:930"
+      - "0.0.0.0:931:931"
+      - "0.0.0.0:932:932"
+      - "0.0.0.0:9322:9322"
+      - "0.0.0.0:933:933"
+      - "0.0.0.0:934:934"
+      - "0.0.0.0:935:935"
+      - "0.0.0.0:936:936"
+      - "0.0.0.0:4300:4300"
+      - "0.0.0.0:5000:5000"
+    links:
+      - "myphp"
+    volumes:
+      - /server/www:/usr/share/nginx/html
+      - /server/nginx:/etc/nginx
+      - /server/logs/nginx.logs:/var/log/nginx
+  mygogs:
+    build: ./gogs
+    container_name: "mygogs"
+    privileged: true
+    restart: always
+    ports:
+      - "10022:22"
+      - "13000:3000"
+    volumes:
+      - /server/gogs:/data
+    links:
+      - "mydb"
+  myredis:
+    build: ./redis
+    container_name: "myredis"
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - /server/redis:/data
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    ports:
+        - "8080:80"
+    environment:
+        PMA_ARBITRARY: 1
+        PMA_HOST: ${MYSQL_HOST}
+    restart: always
+    depends_on:
+        - mydb
+  composer:
+      image: "composer"
+      volumes:
+          - "/server/www/app:/app"
+      command: install
