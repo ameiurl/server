@@ -1,0 +1,23 @@
+{
+    "name": "dragonfly/foundation",
+    "description": "cncn sdk 基础库",
+    "keywords": [
+        "sdk", "foundation"
+    ],
+    "authors": [
+        {
+            "name": "amei",
+            "email":"ameiurl@gmail.com"
+        }
+    ],
+    "autoload": {
+        "files" : ["src/FunctionCommon.php"],
+        "psr-4": {
+            "Dragonfly\\foundation\\": "src"
+        }
+    },
+    "config":{
+        "secure-http":false,
+        "preferred-install": "dist"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "rpc/com",
+    "description": "账户rpc",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "黄景祥",
+            "email": "huangjx@cncn.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "dragonfly/rpc": "dev-master",
+        "ext-yar": "*"
+    },
+    "repositories":[
+        {
+            "type": "vcs",
+            "url": "ssh://git@192.168.40.130:33333/dragonfly/rpc.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rpc\\Com\\": ""
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist"
+    }
+}

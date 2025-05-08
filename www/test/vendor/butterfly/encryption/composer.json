@@ -1,0 +1,22 @@
+{
+  "name": "butterfly/encryption",
+  "description": "The Butterfly encryption package.",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "黄景祥",
+      "email": "huangjx@cncn.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0",
+    "ext-openssl": "*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Butterfly\\Encryption\\": ""
+    }
+  },
+  "minimum-stability": "dev"
+}

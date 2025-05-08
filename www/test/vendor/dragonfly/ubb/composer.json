@@ -1,0 +1,22 @@
+{
+  "name": "dragonfly/ubb",
+  "description": "业务相关基础组件库之ubb替换",
+  "type": "component",
+  "require": {
+    "php": "^7.0"
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "蔡育才",
+      "email": "caiyc@cncn.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Dragonfly\\Ubb\\": ""
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

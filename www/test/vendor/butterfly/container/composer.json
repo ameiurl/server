@@ -1,0 +1,23 @@
+{
+    "name": "butterfly/container",
+    "description": "Butterfly 依赖注入容器组件",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "黄景祥",
+            "email": "huangjx@cncn.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "pimple/pimple": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Butterfly\\Container\\": ""
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

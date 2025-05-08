@@ -1,0 +1,23 @@
+{
+    "name": "butterfly/http",
+    "description": "Butterfly HTTP 组件",
+    "type": "library",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "黄景祥",
+            "email": "huangjx@cncn.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "zendframework/zend-diactoros": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Butterfly\\Http\\": ""
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
