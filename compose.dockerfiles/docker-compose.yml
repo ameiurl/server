@@ -133,6 +133,8 @@ services:
       - /server/redis/data:/data
       - /server/redis/redis.conf:/usr/local/etc/redis/redis.conf
       - /server/redis/logs:/logs
+      #配置文件启动
+    command: redis-server /usr/local/etc/redis/redis.conf
   myadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
