@@ -28,7 +28,7 @@ services:
       - "9002:9000"
     volumes:
       - /server/www:/var/www/html
-      - /server/php/php.ini:/usr/local/etc/php/php.ini
+      - /server/php/56/php.ini:/usr/local/etc/php/php.ini
       - /server/logs/php.logs:/var/log/php
     links:
       - "mydb"
@@ -42,8 +42,24 @@ services:
     ports:
       - "9000:9000"
     volumes:
-      - /server/www:/var/www/html
+      - /mnt/hgfs/www:/var/www/html
       - /server/php/php.ini:/usr/local/etc/php/php.ini
+      - /server/logs/php.logs:/var/log/php
+    links:
+      - "mydb"
+      - "myredis"
+  myphp7.4:
+    # build: ./php
+    image: suyar/php:7.4-fpm 
+    container_name: "myphp7.4"
+    privileged: true
+    restart: always
+    ports:
+      - "9003:9000"
+    volumes:
+      - /mnt/hgfs/www:/var/www/html
+      - /server/php/74/php.ini:/usr/local/etc/php/php.ini
+      - /server/php/74/swoole:/usr/local/etc/php/swoole
       - /server/logs/php.logs:/var/log/php
     links:
       - "mydb"
@@ -56,8 +72,8 @@ services:
     ports:
       - "9001:9000"
     volumes:
-      - /server/www:/var/www/html
-      - /server/php/php.ini:/usr/local/etc/php/php.ini
+      - /mnt/hgfs/www:/var/www/html
+      - /server/php/82/php.ini:/usr/local/etc/php/php.ini
       - /server/logs/php.logs:/var/log/php
     links:
       - "mydb"
@@ -92,7 +108,7 @@ services:
     links:
       - "myphp"
     volumes:
-      - /server/www:/usr/share/nginx/html
+      - /mnt/hgfs/www:/usr/share/nginx/html
       - /server/nginx:/etc/nginx
       - /server/logs/nginx.logs:/var/log/nginx
   mygogs:
@@ -114,7 +130,9 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - /server/redis:/data
+      - /server/redis/data:/data
+      - /server/redis/redis.conf:/usr/local/etc/redis/redis.conf
+      - /server/redis/logs:/logs
   myadmin:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
