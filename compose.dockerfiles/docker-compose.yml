@@ -42,7 +42,7 @@ services:
     ports:
       - "9000:9000"
     volumes:
-      - /mnt/hgfs/www:/var/www/html
+      - /server/www:/var/www/html
       - /server/php/php.ini:/usr/local/etc/php/php.ini
       - /server/logs/php.logs:/var/log/php
     links:
@@ -57,7 +57,7 @@ services:
     ports:
       - "9003:9000"
     volumes:
-      - /mnt/hgfs/www:/var/www/html
+      - /server/www:/var/www/html
       - /server/php/74/php.ini:/usr/local/etc/php/php.ini
       - /server/php/74/swoole:/usr/local/etc/php/swoole
       - /server/logs/php.logs:/var/log/php
@@ -103,6 +103,7 @@ services:
       - "0.0.0.0:934:934"
       - "0.0.0.0:935:935"
       - "0.0.0.0:936:936"
+      - "0.0.0.0:1000:1000"
       - "0.0.0.0:4300:4300"
       - "0.0.0.0:5000:5000"
     links:
