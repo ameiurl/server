@@ -77,3 +77,37 @@ total size is 180,320,256  speedup is 110.26
 --- Cleaning up temporary directory again ---
 Deployment finished at Sat Jun  7 14:31:49 CST 2025
 
+==========================================
+Deployment started at Sat Jun  7 19:54:33 CST 2025
+==========================================
+--- Cleaning up temporary directory ---
+--- Checking out latest code from master branch ---
+fatal: this operation must be run in a work tree
+--- Copying files to myphp container ---
+lstat /tmp/erp_doraemon_deploy: no such file or directory
+--- Syncing files with rsync inside myphp container ---
+sending incremental file list
+./
+tmp3.txt
+.git/
+.git/COMMIT_EDITMSG
+.git/index
+.git/logs/HEAD
+.git/logs/refs/heads/master
+.git/logs/refs/remotes/origin/master
+.git/objects/
+.git/objects/a8/
+.git/objects/a8/e94833f07e70d7152dc3ef218a06f344218b15
+.git/objects/c7/dc989f8044a4fcf16361414998e14694e1ac7e
+.git/objects/d0/
+.git/objects/d0/c44091aa2b0f9480924840125fa8c7560f0835
+.git/refs/heads/
+.git/refs/heads/master
+.git/refs/remotes/origin/
+.git/refs/remotes/origin/master
+
+sent 1,634,047 bytes  received 2,291 bytes  3,272,676.00 bytes/sec
+total size is 180,321,408  speedup is 110.20
+--- Cleaning up temporary directory again ---
+Deployment finished at Sat Jun  7 19:54:33 CST 2025
+

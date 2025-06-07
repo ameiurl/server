@@ -7,7 +7,6 @@
 
 # 获取脚本所在的目录
 HOOK_DIR=$(dirname "$0")
-echo $HOOK_DIR;
 
 # 异步执行部署脚本
 nohup "$HOOK_DIR/deploy.sh" > /dev/null 2>&1 &
