@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# 异步、在后台执行部署脚本，并且忽略挂断信号
+# 将所有输出（包括错误）都重定向到 deploy.sh 内部定义的日志文件
+# & 让命令在后台运行
+# nohup 保证即使 post-receive 退出，deploy.sh 也能继续运行
+
+# 获取脚本所在的目录
+HOOK_DIR=$(dirname "$0")
+echo $HOOK_DIR;
+
+# 异步执行部署脚本
+nohup "$HOOK_DIR/deploy.sh" > /dev/null 2>&1 &
+
+# 脚本立即退出，git push 瞬间返回成功
+exit 0

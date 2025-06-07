@@ -1,0 +1,79 @@
+==========================================
+Deployment started at Sat Jun  7 14:31:30 CST 2025
+==========================================
+--- Cleaning up temporary directory ---
+--- Checking out latest code from master branch ---
+fatal: this operation must be run in a work tree
+--- Copying files to myphp container ---
+lstat /tmp/erp_doraemon_deploy: no such file or directory
+--- Syncing files with rsync inside myphp container ---
+sending incremental file list
+deleting tmp.txt
+./
+tmp3.txt
+.git/
+.git/COMMIT_EDITMSG
+.git/index
+.git/logs/HEAD
+.git/logs/refs/heads/master
+.git/logs/refs/remotes/origin/master
+.git/objects/
+.git/objects/01/
+.git/objects/01/8c801f8c3302eea88f75a93b105ee8aabd410c
+.git/objects/0a/
+.git/objects/0a/b959dae19500c21481c0fc69802b253933c402
+.git/objects/2c/
+.git/objects/2c/c2463a63a05f59b98ed56477e415f52e1f56f6
+.git/objects/30/
+.git/objects/30/bb86839c894def19af0315ec2fbaf7318342f6
+.git/objects/5c/
+.git/objects/5c/94524bbc0cb4376744a881ba81a3ea10f491b9
+.git/objects/90/
+.git/objects/90/609cedc7257015fbdef480bdafc69979c95f46
+.git/objects/98/
+.git/objects/98/41f9c4c1ff9d1d7df51728616875ac8d013704
+.git/objects/ed/c16d9e64656d8cc7037db401c8765ad07baa63
+.git/objects/f0/
+.git/objects/f0/94d3b0c0dd8915882696e0dbd1ea0a4bad2527
+.git/refs/heads/
+.git/refs/heads/master
+.git/refs/remotes/origin/
+.git/refs/remotes/origin/master
+
+sent 1,634,728 bytes  received 2,431 bytes  3,274,318.00 bytes/sec
+total size is 180,319,737  speedup is 110.14
+--- Cleaning up temporary directory again ---
+Deployment finished at Sat Jun  7 14:31:30 CST 2025
+
+==========================================
+Deployment started at Sat Jun  7 14:31:49 CST 2025
+==========================================
+--- Cleaning up temporary directory ---
+--- Checking out latest code from master branch ---
+fatal: this operation must be run in a work tree
+--- Copying files to myphp container ---
+lstat /tmp/erp_doraemon_deploy: no such file or directory
+--- Syncing files with rsync inside myphp container ---
+sending incremental file list
+deleting tmp3.txt
+./
+.git/
+.git/COMMIT_EDITMSG
+.git/index
+.git/logs/HEAD
+.git/logs/refs/heads/master
+.git/logs/refs/remotes/origin/master
+.git/objects/
+.git/objects/e1/
+.git/objects/e1/fe7a7157e1791820ed33f4ef283db8442323f3
+.git/objects/ed/c16d9e64656d8cc7037db401c8765ad07baa63
+.git/refs/heads/
+.git/refs/heads/master
+.git/refs/remotes/origin/
+.git/refs/remotes/origin/master
+
+sent 1,633,220 bytes  received 2,256 bytes  3,270,952.00 bytes/sec
+total size is 180,320,256  speedup is 110.26
+--- Cleaning up temporary directory again ---
+Deployment finished at Sat Jun  7 14:31:49 CST 2025
+

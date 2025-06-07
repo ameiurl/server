@@ -122,6 +122,7 @@ services:
       - "13000:3000"
     volumes:
       - /server/gogs:/data
+      - /var/run/docker.sock:/var/run/docker.sock
     links:
       - "mydb"
   myredis:
