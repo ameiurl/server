@@ -108,12 +108,17 @@ services:
       - "0.0.0.0:1000:1000"
       - "0.0.0.0:4300:4300"
       - "0.0.0.0:5000:5000"
-    links:
-      - "myphp"
     volumes:
       - /mnt/hgfs/www:/usr/share/nginx/html
       - /server/nginx:/etc/nginx
       - /server/logs/nginx.logs:/var/log/nginx
+    networks:
+      - my_app_net
+    depends_on:
+      - myphp
+      - myphp5.6
+      - myphp7.4
+      - myphp8.2
   mygogs:
     build: ./gogs
     container_name: "mygogs"
@@ -155,14 +160,15 @@ services:
     networks:
       - my_app_net
     depends_on:
-        - mydb
+      - mydb
   composer:
-      image: "composer"
-      volumes:
-          - "/server/www/app:/app"
-      command: install
+    image: "composer"
+    volumes:
+        - "/server/www/app:/app"
+    command: install
     networks:
       - my_app_net
-  networks:
-    my_app_net:
-      driver: bridge
+
+networks:
+  my_app_net:
+    driver: bridge
