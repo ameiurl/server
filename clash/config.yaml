@@ -8,15 +8,16 @@ proxies:
   - {name: ❗您当前客户端v2rayN不支持hy协议❗, server: 1.1.1.1, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: fake_node_password}
   - {name: ❗请到我们教程中下载Clash Verge❗, server: 1.1.1.1, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: fake_node_password}
   - {name: ❗教程 https://user.vp2.biz/#/knowledge❗, server: 1.1.1.1, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: fake_node_password}
-  - {name: 15新加坡集群-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15415, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
-  - {name: 18日本-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15418, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
   - {name: 5美国集群-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15405, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
   - {name: 6美国圣何塞集群-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15406, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
   - {name: 16美国凤凰城集群-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15416, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
+  - {name: 7韩国春川集群-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15407, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
+  - {name: 15新加坡集群-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15415, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
   - {name: 9日本大版集群-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15409, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
-  - {name: 20澳洲-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15420, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
+  - {name: 18日本-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15418, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
   - {name: 1香港集群-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15401, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
   - {name: 3香港-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15403, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
+  - {name: 20澳洲-专线(trojan), server: dnsmart.vp-cdn.mob.networklinkpro.com, port: 15420, type: trojan, password: 5a49a238-8d65-48d3-8c7a-6f5c07e6d0af, skip-cert-verify: true, network: ws, ws-opts: {path: ""}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -26,15 +27,16 @@ proxy-groups:
       - ❗您当前客户端v2rayN不支持hy协议❗
       - ❗请到我们教程中下载Clash Verge❗
       - ❗教程 https://user.vp2.biz/#/knowledge❗
-      - 15新加坡集群-专线(trojan)
-      - 18日本-专线(trojan)
       - 5美国集群-专线(trojan)
       - 6美国圣何塞集群-专线(trojan)
       - 16美国凤凰城集群-专线(trojan)
+      - 7韩国春川集群-专线(trojan)
+      - 15新加坡集群-专线(trojan)
       - 9日本大版集群-专线(trojan)
-      - 20澳洲-专线(trojan)
+      - 18日本-专线(trojan)
       - 1香港集群-专线(trojan)
       - 3香港-专线(trojan)
+      - 20澳洲-专线(trojan)
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -43,15 +45,16 @@ proxy-groups:
       - ❗您当前客户端v2rayN不支持hy协议❗
       - ❗请到我们教程中下载Clash Verge❗
       - ❗教程 https://user.vp2.biz/#/knowledge❗
-      - 15新加坡集群-专线(trojan)
-      - 18日本-专线(trojan)
       - 5美国集群-专线(trojan)
       - 6美国圣何塞集群-专线(trojan)
       - 16美国凤凰城集群-专线(trojan)
+      - 7韩国春川集群-专线(trojan)
+      - 15新加坡集群-专线(trojan)
       - 9日本大版集群-专线(trojan)
-      - 20澳洲-专线(trojan)
+      - 18日本-专线(trojan)
       - 1香港集群-专线(trojan)
       - 3香港-专线(trojan)
+      - 20澳洲-专线(trojan)
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -61,15 +64,16 @@ proxy-groups:
       - ❗您当前客户端v2rayN不支持hy协议❗
       - ❗请到我们教程中下载Clash Verge❗
       - ❗教程 https://user.vp2.biz/#/knowledge❗
-      - 15新加坡集群-专线(trojan)
-      - 18日本-专线(trojan)
       - 5美国集群-专线(trojan)
       - 6美国圣何塞集群-专线(trojan)
       - 16美国凤凰城集群-专线(trojan)
+      - 7韩国春川集群-专线(trojan)
+      - 15新加坡集群-专线(trojan)
       - 9日本大版集群-专线(trojan)
-      - 20澳洲-专线(trojan)
+      - 18日本-专线(trojan)
       - 1香港集群-专线(trojan)
       - 3香港-专线(trojan)
+      - 20澳洲-专线(trojan)
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -91,15 +95,16 @@ proxy-groups:
       - ❗您当前客户端v2rayN不支持hy协议❗
       - ❗请到我们教程中下载Clash Verge❗
       - ❗教程 https://user.vp2.biz/#/knowledge❗
-      - 15新加坡集群-专线(trojan)
-      - 18日本-专线(trojan)
       - 5美国集群-专线(trojan)
       - 6美国圣何塞集群-专线(trojan)
       - 16美国凤凰城集群-专线(trojan)
+      - 7韩国春川集群-专线(trojan)
+      - 15新加坡集群-专线(trojan)
       - 9日本大版集群-专线(trojan)
-      - 20澳洲-专线(trojan)
+      - 18日本-专线(trojan)
       - 1香港集群-专线(trojan)
       - 3香港-专线(trojan)
+      - 20澳洲-专线(trojan)
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -115,15 +120,16 @@ proxy-groups:
       - ❗您当前客户端v2rayN不支持hy协议❗
       - ❗请到我们教程中下载Clash Verge❗
       - ❗教程 https://user.vp2.biz/#/knowledge❗
-      - 15新加坡集群-专线(trojan)
-      - 18日本-专线(trojan)
       - 5美国集群-专线(trojan)
       - 6美国圣何塞集群-专线(trojan)
       - 16美国凤凰城集群-专线(trojan)
+      - 7韩国春川集群-专线(trojan)
+      - 15新加坡集群-专线(trojan)
       - 9日本大版集群-专线(trojan)
-      - 20澳洲-专线(trojan)
+      - 18日本-专线(trojan)
       - 1香港集群-专线(trojan)
       - 3香港-专线(trojan)
+      - 20澳洲-专线(trojan)
   - name: 📲 电报信息
     type: select
     proxies:
@@ -132,15 +138,16 @@ proxy-groups:
       - ❗您当前客户端v2rayN不支持hy协议❗
       - ❗请到我们教程中下载Clash Verge❗
       - ❗教程 https://user.vp2.biz/#/knowledge❗
-      - 15新加坡集群-专线(trojan)
-      - 18日本-专线(trojan)
       - 5美国集群-专线(trojan)
       - 6美国圣何塞集群-专线(trojan)
       - 16美国凤凰城集群-专线(trojan)
+      - 7韩国春川集群-专线(trojan)
+      - 15新加坡集群-专线(trojan)
       - 9日本大版集群-专线(trojan)
-      - 20澳洲-专线(trojan)
+      - 18日本-专线(trojan)
       - 1香港集群-专线(trojan)
       - 3香港-专线(trojan)
+      - 20澳洲-专线(trojan)
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -150,15 +157,16 @@ proxy-groups:
       - ❗您当前客户端v2rayN不支持hy协议❗
       - ❗请到我们教程中下载Clash Verge❗
       - ❗教程 https://user.vp2.biz/#/knowledge❗
-      - 15新加坡集群-专线(trojan)
-      - 18日本-专线(trojan)
       - 5美国集群-专线(trojan)
       - 6美国圣何塞集群-专线(trojan)
       - 16美国凤凰城集群-专线(trojan)
+      - 7韩国春川集群-专线(trojan)
+      - 15新加坡集群-专线(trojan)
       - 9日本大版集群-专线(trojan)
-      - 20澳洲-专线(trojan)
+      - 18日本-专线(trojan)
       - 1香港集群-专线(trojan)
       - 3香港-专线(trojan)
+      - 20澳洲-专线(trojan)
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -177,15 +185,16 @@ proxy-groups:
       - ❗您当前客户端v2rayN不支持hy协议❗
       - ❗请到我们教程中下载Clash Verge❗
       - ❗教程 https://user.vp2.biz/#/knowledge❗
-      - 15新加坡集群-专线(trojan)
-      - 18日本-专线(trojan)
       - 5美国集群-专线(trojan)
       - 6美国圣何塞集群-专线(trojan)
       - 16美国凤凰城集群-专线(trojan)
+      - 7韩国春川集群-专线(trojan)
+      - 15新加坡集群-专线(trojan)
       - 9日本大版集群-专线(trojan)
-      - 20澳洲-专线(trojan)
+      - 18日本-专线(trojan)
       - 1香港集群-专线(trojan)
       - 3香港-专线(trojan)
+      - 20澳洲-专线(trojan)
 rules:
   - DOMAIN-SUFFIX,local,🎯 全球直连
   - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
