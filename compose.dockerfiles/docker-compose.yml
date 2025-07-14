@@ -179,6 +179,12 @@ services:
       - "7891:7891"
       - "9090:9090"
     restart: unless-stopped
+  yacd:
+    image: cms1984/yacd
+    container_name: yacd
+    ports:
+      - "9091:80"
+    restart: unless-stopped
 networks:
   my_app_net:
     driver: bridge
